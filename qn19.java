@@ -1,21 +1,18 @@
 import java.util.Scanner; 
 public class SortAsc {    
-    public static void main(String[] args) {        
-            
-        //Initialize array     
+    public static void main(String[] args) {             
         
 	Scanner scan=new Scanner(System.in);     
         int temp = 0;    
         System.out.printf("Enter no. of element:");
-	int n= scan.newInt();
-	int  arr[];
-        //Displaying elements of original array    
-        System.out.println("Elements of original array: ");    
+	int n= scan.nextInt();
+	int  []arr = new int[n];
+        System.out.print("Elements of original array:\n ");    
         for (int i = 0; i <n; i++) {     
-            System.out.print(arr[i] + " ");    
+            System.out.printf("Enter element of %d\n",i+1);
+	arr[i]=scan.nextInt();    
         }    
-            
-        //Sort the array in ascending order    
+              
         for (int i = 0; i < n; i++) {     
             for (int j = i+1; j < n; j++) {     
                if(arr[i] > arr[j]) {    
@@ -28,10 +25,10 @@ public class SortAsc {
           
         System.out.println();    
             
-        //Displaying elements of array after sorting    
+         
         System.out.println("Elements of array sorted in ascending order: ");    
         for (int i = 0; i < n; i++) {     
-            System.out.print(arr[i] + " ");    
-        }    
+            System.out.printf("%d\t",arr[i]);    
+        }   
     }    
 }    
